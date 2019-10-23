@@ -1,0 +1,67 @@
+{
+  "result": {
+    "total": 10,
+    "row": [{
+        "id": 1,
+        "label": "权限列表",
+        "icon": "pie-chart",
+        "childrenList": [{
+          "id": 11,
+          "label": "权限1",
+          "path": "/list1",
+          "icon": "desktop"
+        }, {
+          "id": 12,
+          "label": "权限2",
+          "path": "/list2",
+          "icon": "pie-chart"
+        }]
+        },{
+          "id": 2,
+          "label": "图形列表",
+          "icon": "pie-chart",
+          "childrenList": [{
+            "id": 21,
+            "label": "图形1",
+            "path": "/chart1",
+            "icon": "pie-chart"
+          },{
+            "id": 22,
+            "label": "图形1",
+            "path": "/chart1",
+            "icon": "pie-chart"
+          }]
+        },{
+          "id": 3,
+          "label": "数据列表",
+          "icon": "pie-chart",
+          "childrenList": [{
+            "id": 31,
+            "label": "数据1",
+            "path": "/data1",
+            "icon": "pie-chart"
+          }, {
+            "id": 32,
+            "label": "数据2",
+            "path": "/data2",
+            "icon": "pie-chart"
+          }]
+        },{
+          "id": 4,
+          "label": "信息",
+          "icon": "pie-chart",
+          "childrenList": [{
+            "id": 41,
+            "label": "信息1",
+            "path": "/message1",
+            "icon": "pie-chart"
+          }, {
+            "id": 42,
+            "label": "信息2",
+            "path": "/message2",
+            "icon": "pie-chart"
+          }]
+        }
+      ]
+    }
+}
