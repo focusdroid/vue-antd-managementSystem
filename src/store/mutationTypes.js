@@ -1,1 +1,3 @@
 export const SETADDNAME = 'SETADDNAME'
+export const SETSELECTKEYS = 'SETSELECTKEYS'
+export const SETOPENKEYS = 'SETOPENKEYS'
