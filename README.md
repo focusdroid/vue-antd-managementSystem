@@ -1,4 +1,15 @@
 ## 管理系统模板系统
+### 技术参数
+```
+node: v10.16.0
+npm: v6.10.2
+cnpm: 
+Vue: v2.5.2
+Vue-Router: v3.0.1
+Vuex: v3.1.1
+Axios: v0.19.0
+Antd-Design-Vue: v1.4.3
+```
 ### 目录设置
 ```
 > 文件目录配置：
@@ -18,13 +29,21 @@ vuex的使用：
     changName () {
       this.$store.dispatch('setName', 'tree')
     }
-  其他的代码在
+  其他的代码在 leftMenu中有详细使用
   
 > 0. 首页（/）面包屑文件路径: src/pages/breadcrumb/Breadcrumb.vue
 > 1. 顶部显示标题的路径：src/pages/header/Header.vue
 > 2. 左侧菜单展示文件路径： src/pages/leftmenu/LeftMenu.vue
-> 3.
-> 4.
-> 5.
-> 6.
+
+```
+### 记住leftMenu选择的子项
+```
+具体操作思路：
+antd-design-vue提供了
+展开菜单(defaultOpenKeys),
+选择子项(defaultSelectedKeys),
+都是Number类型的数据，
+只要在点击的时候记住点击的选项的标识(例如：id)必须是数字,
+并在本地存储或者服务器端记录，
+读取 + 赋值就可以使用
 ```
