@@ -1,8 +1,9 @@
 <template>
   <a-layout-header style="background: #fff; padding: 0">
     <div class="header">
-      <div>12313</div>
+      <div>系统数据监控系统</div>
       <div class="disflex">
+        <div>{{time}}</div>
         <div class="ml20 tip-icon message-position showhead">
           <a-icon type="bell" />
           <span class="message-red">{{information | opermation }}</span>
@@ -19,8 +20,12 @@ export default { // 顶部的title显示
   name: 'header',
   data () {
     return {
-      information: 6
+      information: 6,
+      time: ''
     }
+  },
+  created () {
+    this.updateTime()
   },
   filters: {
     opermation (num) {
@@ -30,6 +35,23 @@ export default { // 顶部的title显示
         return num
       }
     }
+  },
+  methods: {
+    updateTime () {
+      this.timer = setInterval(() => {
+        let date = new Date(new Date().getTime())
+        let year = date.getFullYear() + '-'
+        let month = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-'
+        let dates = date.getDate() + ' '
+        let hour = (date.getHours() > 9 ? date.getHours() : `0${date.getHours()}`) + ':'
+        let min = (date.getMinutes() > 9 ? date.getMinutes() : `0${date.getMinutes()}`) + ':'
+        let second = date.getSeconds() > 9 ? date.getSeconds() : '0' + date.getSeconds()
+        this.time = year + month + dates + hour + min + second
+      }, 1000)
+    }
+  },
+  beforeDestroy () {
+    this.timer && clearInterval(this.timer)
   }
 }
 </script>
@@ -41,7 +63,6 @@ export default { // 顶部的title显示
     padding: 0 40px;
     .message-position {
       position: relative;
-      margin-right: 40px;
     }
     .message-red {
       position: absolute;
