@@ -15,7 +15,9 @@ import Antd from 'ant-design-vue'
 import 'ant-design-vue/dist/antd.less'
 import './style/default.less'
 import './style/reset.css'
+import echarts from 'echarts'
 Vue.use(Antd)
+Vue.prototype.$echarts = echarts
 
 Vue.config.productionTip = false
 
